@@ -6,9 +6,10 @@ const Task = (props) => {
     <div>
       {props.data.map((item, index) => {
         return (
-          <div key={index}>
-            <p>{item}</p>
-            <button onClick={() => {props.handleFilter(item)}}>x</button>
+          <div key={index} className="task">
+            <p className="count">Task{index+1}</p>
+            <p className="task-list" style={{color:"white"}}>{item}</p>
+            <button className="btn" onClick={() => {props.handleFilter(item)}}>x</button>
           </div>
         );
       })}

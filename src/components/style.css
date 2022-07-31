@@ -1,0 +1,37 @@
+.form{
+    text-align: center;
+}
+.input{
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+}
+ .input-btn{
+    padding: 10px;
+    border: 2px  solid white;
+    border-radius: 10px;
+    margin-left: 5px;
+ }
+.task{
+    border: 2px solid white;
+    margin: 30px 50px;
+    display: flex;
+}
+.count{
+    /* background-color: #ffffff; */
+    margin: 0px;
+    width: 15%;
+    color: white;
+    padding-top: 15px;
+}
+
+.task-list{
+    width: 75%;
+    text-align: left;
+}
+.btn{
+    width:11%;
+    background-color: black;
+    border: 0 solid black;
+    color: aliceblue;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Task from "./Task";
+import "./style.css"
 
 const Form = () => {
   const [value, setValue] = useState("");
@@ -9,23 +10,27 @@ const Form = () => {
     setValue(event.target.value);
   };
   const handleSubmit = (e) => {
+    if(value=== ""){
+        alert("Please Add a Task")
+    }else{
     e.preventDefault();
     setList([...list, value]);
     setValue("");
+    }
   };
   const deleteTask = (task) => {
     setList(list.filter(item=>item!==task));
   };
 
   return (
-    <div>
+    <div className="form">
       <form
         onSubmit={(e) => {
           handleSubmit(e);
         }}
       >
-        <input type="text" value={value} onChange={(e) => handleChange(e)} />
-        <input type="submit" value="Submit" />
+        <input className="input" type="text" value={value} placeholder="Enter a task..." onChange={(e) => handleChange(e)} />
+        <input className="input-btn" type="submit" value="Submit" />
       </form>
       {list.length ? <Task data={list} handleFilter={deleteTask} /> : null}
     </div>
